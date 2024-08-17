@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background-color: white;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .form-group {
+            width: 60%;
+            margin: 0 auto;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        #predictions {
+            margin-top: 20px;
+        }
+        .list-group-item {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div id="logo">GROUP4</div> 
+        <div class="itop"><a class="atop" href="{{ url_for('review') }}">Hotels</a></div>
+        <div class="itop"><a class="atop" href="{{ url_for('airline') }}">Airlines</a></div>
+    </div>
+    
+    <div class="center">
+        <div class="ctleft">
+            <div class="tp"><a href="{{ url_for('review') }}">Overall</a></div>
+            <div class="tp"><a href="{{ url_for('predict_route') }}">Predict Random Text</a></div>
+        </div>
+
+        <div class="ctright">
+            <div class="container mt-5">
+                <h1 class="text-center">Aspect Sentiment Prediction</h1>
+                <form method="POST" action="/predict" class="mt-4">
+                    <div class="form-group">
+                        <label for="input_text">Enter your text:</label>
+                        <input type="text" class="form-control" id="input_text" name="input_text" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                </form>
+                <hr>
+                <div id="predictions">
+                    {% if predictions %}
+                        <h2>Predictions:</h2>
+                        <ul class="list-group">
+                            {% for prediction in predictions %}
+                                <li class="list-group-item">{{ prediction }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='review.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="top">
+        <div id="logo">GROUP4</div> 
+        <div class="itop"><a class="atop" href="{{ url_for('index') }}">Hotels</a></div>
+        <div class="itop"><a class="atop" href="{{ url_for('airline') }}">Airlines</a></div>
+    </div>
+    
+    <div class="center">
+        <div class="ctleft">
+            <div class="tp"><a href="{{ url_for('index') }}">Overall</a></div>
+            <div class="tp"><a href="{{ url_for('predict_route') }}">Predict Random Text</a></div>
+        </div>
+
+        <div class="ctright">
+            <iframe title="Hotel" src="https://app.powerbi.com/view?r=eyJrIjoiODY3YTJlMDEtZWQ5ZS00YWI4LWFiNjgtMTVjYjhkNDZhNTBkIiwidCI6IjZhZWViMGQyLTIxZGQtNDAzZS04YWY5LWZiN2Y1Yzg4ODQyYSIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="itbt"><i class="fa-brands fa-facebook"></i> Facebook </div>
+        <div class="itbt"><i class="fa-brands fa-instagram"></i> Instagram</div>
+        <div class="itbt"><i class="fa-solid fa-location-dot"></i> Hà Nội</div>
+        <div class="itbt"><i class="fa-brands fa-tiktok"></i> Pnmt@tt</div>
+        <div class="itbt"><i class="fa-solid fa-envelope"></i> GROUP4</div>
+    </div>
+</body>
+</html>

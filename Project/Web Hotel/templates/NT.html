@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='a.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="a.js"></script>
+    <style>
+        .buttons a button {
+            width: 100px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .buttons a button:hover {
+            background-color: grey;
+            color: black;
+        }
+
+	.buttons button.booking {
+            margin-right: 15px; /* Adjust this value to move the button to the left */
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div id="logo">GROUP4</div> 
+        <div class="itop"><a class="atop" href="{{ url_for('index') }}">Hotels</a></div>
+        <div class="itop"><a class="atop" href="{{ url_for('airline') }}">Airline</a></div>
+    </div>
+    
+    <div class="center">
+        <div class="ctleft">
+            <div class="tp"><a href="{{ url_for('index') }}">Hà Nội</a></div>
+            <div class="tp"><a href="{{ url_for('HCM') }}">Hồ Chí Minh</a></div>
+            <div class="tp"><a href="{{ url_for('HL') }}">Hạ Long</a></div>
+            <div class="tp"><a href="{{ url_for('DN') }}">Đà Nẵng</a></div>
+            <div class="tp"><a href="{{ url_for('CT') }}">Cần Thơ</a></div>
+            <div class="tp"><a href="{{ url_for('NT') }}">Nha Trang</a></div>
+          
+        </div>
+
+        <div class="ctright">
+            <div class="ctrtop">
+                <div class="itct">
+                    <img src="https://cdn2.vietnambooking.com/wp-content/uploads/hotel_pro/hotel_334751/1b545adbddec681a5f90b6a0a2e74248.jpg" alt="">
+                    <div class="btit">
+                        <label>459.000VND</label>
+                        <div class="buttons">
+                            <button onclick="window.location.href='{{ url_for('review') }}'">Review</button>
+                            <button class="booking">Booking</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="itct">
+                    <img src="http://www.floridahotel.vn/uploads/pages/n4-2140-870x0.jpg" alt="">
+                    <div class="btit">
+                        <label>459.000VND</label>
+                        <div class="buttons">
+                            <button onclick="window.location.href='{{ url_for('review') }}'">Review</button>
+                            <button class="booking">Booking</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="itct">
+                    <img src="https://mrvivu.com/wp-content/uploads/2020/11/28384335.jpg" alt="">
+                    <div class="btit">
+                        <label>459.000VND</label>
+                        <div class="buttons">
+                            <button onclick="window.location.href='{{ url_for('review') }}'">Review</button>
+                            <button class="booking">Booking</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ctrbottom">
+                <div class="itct">
+                    <img src="https://mrvivu.com/wp-content/uploads/2020/11/241419021.jpg" alt="">
+                    <div class="btit">
+                        <label>459.000VND</label>
+                        <div class="buttons">
+                           <button onclick="window.location.href='{{ url_for('review') }}'">Review</button>
+                            <button class="booking">Booking</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="itct">
+                    <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2018/07/khach-san-nha-trang-vntrip.jpg" alt="">
+                    <div class="btit">
+                        <label>459.000VND</label>
+                        <div class="buttons">
+                            <button onclick="window.location.href='{{ url_for('review') }}'">Review</button>
+                            <button class="booking">Booking</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="itct">
+                    <img src="https://mrvivu.com/wp-content/uploads/2020/11/225822756.jpg" alt="">
+                    <div class="btit">
+                        <label>459.000VND</label>
+                        <div class="buttons">
+                            <button onclick="window.location.href='{{ url_for('review') }}'">Review</button>
+                            <button class="booking">Booking</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="itbt"><i class="fa-brands fa-facebook"></i> Facebook </div>
+        <div class="itbt"><i class="fa-brands fa-instagram"></i> Instagram</div>
+        <div class="itbt"><i class="fa-solid fa-location-dot"></i> Hà Nội</div>
+        <div class="itbt"><i class="fa-brands fa-tiktok"></i> Pnmt@tt</div>
+        <div class="itbt"><i class="fa-solid fa-envelope"></i> GROUP4</div>
+    </div>
+</body>
+</html>

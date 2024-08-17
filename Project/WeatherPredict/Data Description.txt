@@ -1,0 +1,6 @@
+date: ngày
+precipitation (tính bằng milimet(mm)): lượng mưa (trong ngày), ví dụ: mưa, mưa đá, tuyết, mưa đá hoặc mưa phùn 
+temp_max: nhiệt độ tối đa (trong ngày) (độ C - Celsius - nên tìm hiểu)
+temp_min: nhiệt độ thấp nhất (trong ngày) (độ C)
+wind: tốc độ gió (m/s) (km/h = m/s x 3.6)
+weather: output

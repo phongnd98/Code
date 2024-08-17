@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  sleek-airflow:
+
+    image: sleek-airflow:latest
+
+    environment:
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+  
+    volumes:
+
+      - ./airflow:/opt/airflow
+      
+    ports:
+
+      - "8080:8080"
+
+    command: airflow standalone
+
+    depends_on:
+      - postgres
+      
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    ports:
+      - "5432:5432"
+  
+  sleek-smtp:
+   
+    image: bytemark/smtp
+    restart: always

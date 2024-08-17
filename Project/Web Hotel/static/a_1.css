@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.top {
+    font-weight: bold;
+    display: flex;
+}
+
+#logo {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 20%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.itop {
+    width: 40%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: white;
+    background-color: rgba(59, 62, 62, 0.836);
+}
+
+.itop:hover {
+    background-color: rgb(54, 58, 59);
+    color: rgb(255, 255, 255);
+}
+
+.center {
+    height: 739px;
+    background-image: url(shadow-leaves-abstract-wall.jpg);
+    background-size: cover;
+    display: flex;
+    padding: 30px 5%;
+}
+
+.ctleft {
+    width: 20%;
+    margin-right: 30px;
+}
+
+.ctright {
+    width: 80%;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: rgba(88, 86, 86, 0.812);
+    display: flex;
+    flex-direction: column;
+}
+
+.ctrtop, .ctrbottom {
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.tp {
+    height: 70px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.786);
+    text-align: center;
+    line-height: 70px;
+    margin: 20px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.itct {
+    flex: 1;
+    margin: 10px;
+    border: 2px solid rgba(8, 8, 8, 0);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom {
+    display: flex;
+}
+
+.itbt {
+    width: 20%;
+    background-color: rgb(95, 91, 91);
+    height: 41px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+    flex: 1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.btit {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btit label {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.btit .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btit button {
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    width: 100px; /* Đặt chiều rộng cố định cho các nút */
+    height: 40px; /* Đặt chiều cao cố định cho các nút */
+    text-align: center;
+}
+
+.btit button:hover {
+    background-color: rgb(157, 160, 160);
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+
+.atop {
+    padding: 0;
+}
+
+.atop:hover {
+    padding: 0;
+    background-color: rgb(54, 58, 59);
+    color: rgb(255, 255, 255);
+}

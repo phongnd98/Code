@@ -1,7 +1,0 @@
-apache-airflow-providers-github
-# Add more provider packages as needed
-apache-airflow-providers-common-sql
-apache-airflow[pandas]
-apache-airflow-providers-microsoft-mssql
-apache-airflow-providers-microsoft-mssql[common.sql]
-pymssql
